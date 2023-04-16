@@ -8,58 +8,72 @@
     <link rel="stylesheet" href="./asset/style.css">
 </head>
 <body>
- <div class ="weather">
-    <input type="search" class="weather-search" placeholder="Your city">
-    <div class="weather-today">
+<header>
+    <h1>Weather Dashboard</h1>
+</header>
+<main class = "partition">
+    <div class = "city">
+        <h2>Search for a city:</h2>
+        <input type="search" class="weather-search" placeholder="Your city">
+        <button class = "search">search</button>
+    </div>
+
+    <div class ="weather">
+     <div class="weather-today">
         <div class="weather-details">
-            <h2 class="weathericity"> City </h2>
-            <p class="weather-day"> DAY</p>
+            <h2 class="weather-city"> City </h2>
             <div class="weather-current">
-                <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
-                <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>
-                <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+                <p class="weather-temp"><span class="value">Temperature: +25</span> &deg;C</p>
+                <p class="weather-indicator-humidity"><span class="value">Humidity: 50</span>%</p>
+                <p class="weather-indicator-wind"><span class="value">Wind: 50 </span>MPH</p>
             </div>
         </div>
-        <img src="" alt="" class="weather-image">
-        <div class="weather-temp"><span class="value"> +25</span> &deg;C</div>
     </div>
-    <div class="weather-forecast">
+     <div class="weather-forecast">
         <article class="weather-forecast-item">
             <img src="" alt="" class="weather-forecast-icon">
+            <h3 class="weather-forecast-date"> DATE</h3>
             <h3 class="weather-forecast-day"> DAY</h3>
             <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
             <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>
-            <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+            
         </article>
         <article class="weather-forecast-item">
             <img src="" alt="" class="weather-forecast-icon">
+            <h3 class="weather-forecast-date"> DATE</h3>
             <h3 class="weather-forecast-day"> DAY</h3>
             <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
             <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>
-            <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+            
         </article>
         <article class="weather-forecast-item">
             <img src="" alt="" class="weather-forecast-icon">
+            <h3 class="weather-forecast-date"> DATE</h3>
             <h3 class="weather-forecast-day"> DAY</h3>
             <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
             <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>              
-            <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+            
         </article>
         <article class="weather-forecast-item">
             <img src="" alt="" class="weather-forecast-icon">
+            <h3 class="weather-forecast-date"> DATE</h3>
             <h3 class="weather-forecast-day"> DAY</h3>
             <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
             <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>
-            <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+            
         </article>
         <article class="weather-forecast-item">
             <img src="" alt="" class="weather-forecast-icon">
+            <h3 class="weather-forecast-date"> DATE</h3>
             <h3 class="weather-forecast-day"> DAY</h3>
             <p class="weather-indicator-humidity"><span class="value">50</span>%</p>
             <p class="weather-indicator-wind"><span class="value">West, 50</span>m/s</p>
-            <p class="weather-indicator-pressure"><span class="value">1050</span>hPa</p>
+            
         </article>
     </div>
  </div>   
+</main>
+
+ <script src="./asset/script.js"></script>
 </body>
 </html>
