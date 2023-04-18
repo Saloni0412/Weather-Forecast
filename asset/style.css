@@ -4,8 +4,10 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: antiquewhite;
-    /* background-image: url(./images/Untitled\ design\ \(12\).png); */
+    /* background-color: antiquewhite; */
+    background-image: url(./images/Untitled\ design\ \(14\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -13,9 +15,10 @@ body {
   }
   h1 {
     text-align: center;
-    background-color: rgb(126, 179, 192);
+    background-color:rgb(7, 40, 51);
     margin: 0px;
     font-size: 50px;
+    color: aliceblue;
     
   }
   .partition {
@@ -55,16 +58,17 @@ body {
   }
   
   .weather-search::placeholder {
-    color: rgb(9, 9, 51);
+    color: white;
     text-align: center;
   }
   
   .weather-today {
     justify-content: space-between;
-    border: 5px solid rgb(119, 109, 109);
+    border: 5px solid rgb(18, 84, 88);
     border-radius: 10px;
     margin-bottom: 30px;
     padding-left: 10px;
+    display: flex;
   }
   
   .weather-image {
@@ -78,6 +82,10 @@ body {
     margin: 20px 0;
   }
 
+  .weather-forecast-icon {
+    width: 50px;
+
+  }
 /*   
   .weather-indicator::before {
     content: "";
@@ -89,9 +97,10 @@ body {
     margin-right: 10px;
   } */
    
-  .weather-indicator-wind::before {
-    background-image: url(./images/celsius.png);
+  .weather-temp::before {
+    background-image: url(./images/wind-power.png);
   }
+  
   /*
   .weather-indicator-humidity::before {
     background-image: url(../Assets/Images/humidity.png);
