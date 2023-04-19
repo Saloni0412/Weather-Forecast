@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,77 +8,82 @@
     <title>Weather-Forecast</title>
     <link rel="stylesheet" href="./asset/style.css">
 </head>
+
 <body>
-<header>
-    <h1>Weather Dashboard</h1>
-</header>
-<main class = "partition">
-    <div class = "city">
-        <h2>Search for a city:</h2>
-        <input type="search" class="weather-search" placeholder="Your city">
-        <button class = "search">search</button>
-    </div>
+    <!-- header of the page -->
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
 
-    <div class ="weather">
-     <div class="weather-today">
-        <div class="weather-details">
-            <h2 class="weather-city"> City </h2>
-            <h2 class="weather-date"> Date </h2>
-            <div class="weather-current">
-                <p class="weather-temp"><span class="value">Temperature: +25</span> &deg;C</p>
-                <p class="weather-indicator-humidity"><span class="value">Humidity: 50</span>%</p>
-                <p class="weather-indicator-wind"><span class="value">Wind: 50 </span>MPH</p>
-            </div>
-         <div> <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon"></div> 
+    <!-- searching area for the city -->
+    <main class="partition">
+        <div class="city">
+            <h2>Search for a city:</h2>
+            <input type="search" class="weather-search" placeholder="Your city">
+            <button class="search">search</button>
         </div>
-       
-    
-    </div>
-     <div class="weather-forecast">
-        <article class="weather-forecast-item">
-            <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon">
-            <h3 class="weather-forecast-date1"> DATE</h3>
-            <p class="weather-forecast-temp1"><span class="value">Temperature: +25</span> &deg;C</p>
-            <p class="weather-forecast-humidity1"><span class="value">50</span>%</p>
-            <p class="weather-forecast-wind1"><span class="value">West, 50</span> MPH</p>
-            
-        </article>
-        <article class="weather-forecast-item">
-            <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon">
-            <h3 class="weather-forecast-date2"> DATE</h3>
-            <p class="weather-forecast-temp2"><span class="value">Temperature: +25</span> &deg;C</p>
-            <p class="weather-forecast-humidity2"><span class="value">50</span>%</p>
-            <p class="weather-forecast-wind2"><span class="value">Wind: 50</span> MPH</p>
-            
-        </article>
-        <article class="weather-forecast-item">
-            <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon">
-            <h3 class="weather-forecast-date3"> DATE</h3>
-            <p class="weather-forecast-temp3"><span class="value">Temperature: +25</span> &deg;C</p>
-            <p class="weather-forecast-humidity3"><span class="value">50</span>%</p>
-            <p class="weather-forecast-wind3"><span class="value">West, 50</span>m/s</p>             
-            
-        </article>
-        <article class="weather-forecast-item">
-            <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon">
-            <h3 class="weather-forecast-date4"> DATE</h3>
-            <p class="weather-forecast-temp4"><span class="value">Temperature: +25</span> &deg;C</p>
-            <p class="weather-forecast-humidity4"><span class="value">50</span>%</p>
-            <p class="weather-forecast-wind4"><span class="value">West, 50</span>m/s</p>
-            
-        </article>
-        <article class="weather-forecast-item">
-            <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon">
-            <h3 class="weather-forecast-date5"> DATE</h3>
-            <p class="weather-forecast-temp5"><span class="value">Temperature: +25</span> &deg;C</p>
-            <p class="weather-forecast-humidity5"><span class="value">50</span>%</p>
-            <p class="weather-forecast-wind5"><span class="value">West, 50</span>m/s</p>
-            
-        </article>
-    </div>
- </div>   
-</main>
+        <div class="weather">
 
- <script src="./asset/script.js"></script>
+            <!-- current weather slot -->
+            <div class="weather-today">
+                <div class="weather-details">
+                    <h2 class="weather-city"> City </h2>
+                    <h2 class="weather-date"> Date </h2>
+                    <div class="weather-current">
+                        <p class="weather-temp"><span class="value">Temperature: +25</span> &deg;C</p>
+                        <p class="weather-indicator-humidity"><span class="value">Humidity: 50</span>%</p>
+                        <p class="weather-indicator-wind"><span class="value">Wind: 50 </span>MPH</p>
+                    </div>
+                </div>
+                <div> <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon main-icon"></div>
+            </div>
+            <!-- 5 day weather forecast slot -->
+            <div class="weather-forecast">
+                <article class="weather-forecast-item">
+                    <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon image-1">
+                    <h3 class="weather-forecast-date1"> DATE</h3>
+                    <p class="weather-forecast-temp1"><span class="value">Temperature: +25</span> &deg;C</p>
+                    <p class="weather-forecast-humidity1"><span class="value">50</span>%</p>
+                    <p class="weather-forecast-wind1"><span class="value">West, 50</span> MPH</p>
+
+                </article>
+                <article class="weather-forecast-item">
+                    <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon image-2">
+                    <h3 class="weather-forecast-date2"> DATE</h3>
+                    <p class="weather-forecast-temp2"><span class="value">Temperature: +25</span> &deg;C</p>
+                    <p class="weather-forecast-humidity2"><span class="value">50</span>%</p>
+                    <p class="weather-forecast-wind2"><span class="value">Wind: 50</span> MPH</p>
+
+                </article>
+                <article class="weather-forecast-item">
+                    <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon image-3">
+                    <h3 class="weather-forecast-date3"> DATE</h3>
+                    <p class="weather-forecast-temp3"><span class="value">Temperature: +25</span> &deg;C</p>
+                    <p class="weather-forecast-humidity3"><span class="value">50</span>%</p>
+                    <p class="weather-forecast-wind3"><span class="value">West, 50</span>m/s</p>
+
+                </article>
+                <article class="weather-forecast-item">
+                    <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon image-4">
+                    <h3 class="weather-forecast-date4"> DATE</h3>
+                    <p class="weather-forecast-temp4"><span class="value">Temperature: +25</span> &deg;C</p>
+                    <p class="weather-forecast-humidity4"><span class="value">50</span>%</p>
+                    <p class="weather-forecast-wind4"><span class="value">West, 50</span>m/s</p>
+
+                </article>
+                <article class="weather-forecast-item">
+                    <img src="./asset/images/sunny.png" alt="sunny" class="weather-forecast-icon image-5">
+                    <h3 class="weather-forecast-date5"> DATE</h3>
+                    <p class="weather-forecast-temp5"><span class="value">Temperature: +25</span> &deg;C</p>
+                    <p class="weather-forecast-humidity5"><span class="value">50</span>%</p>
+                    <p class="weather-forecast-wind5"><span class="value">West, 50</span>m/s</p>
+
+                </article>
+            </div>
+        </div>
+    </main>
+    <!-- Javascript file -->
+    <script src="./asset/script.js"></script>
 </body>
+
 </html>
