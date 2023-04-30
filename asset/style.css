@@ -32,6 +32,7 @@ h1 {
 }
 
 .search {
+  display: block;
   font-size: 30px;
   width: 242px;
   margin-top: 10px;

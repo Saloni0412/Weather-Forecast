@@ -1,5 +1,6 @@
 let search = document.querySelector(".weather-search");
 let searchBtn = document.querySelector(".search");
+let clearBtn = document.querySelector(".clear");
 let searchCity = document.querySelector(".weather-city");
 
 let date = document.querySelector(".weather-date");
@@ -66,6 +67,7 @@ function firstFetch(city) {
       let mainWeatherImageUrl = `https://openweathermap.org/img/w/${mainWeatherIcon}.png`;
       mainIcon.src = mainWeatherImageUrl;
   })
+
 }
 
 // function to fetch 5 days weather API and then post data on page
@@ -138,8 +140,8 @@ let dateOfWeek = () => {
 }
 
 // function to store searched cities in local storage
+
 function saveToLocal(city) {
   searchHistory.push(city)
   localStorage.setItem('cities', JSON.stringify(searchHistory))
 }
-
