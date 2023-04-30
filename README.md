@@ -12,7 +12,7 @@ N/A
 
 This is a website protraying weather forecast data for 5 days. One can enter the city name and click enter and data will be posted accordingly. The searched cities are also listed below in Local variables. Screenshot of the image is added below.
 
-![screenshot of the page](./images/saloni0412.github.io_Weather-Forecast_.png)
+![screenshot of the page](./asset/images/saloni0412.github.io_Weather-Forecast_.png)
 
 
 ## Credits
