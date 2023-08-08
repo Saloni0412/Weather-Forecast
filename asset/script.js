@@ -39,36 +39,59 @@ let wind5 = document.querySelector(".weather-forecast-wind5>.value");
 let Icon5 = document.querySelector(".image-5");
 
 let mainIcon = document.querySelector(".main-icon");
+let list = document.querySelector(".list");
 
 let weatherForecastItems = document.querySelector(".weather-forecast-item");
 
 
 let apiKey = "b7888d02409b33f95120630fb1218d0b";
 let weatherBaseCall = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=" + apiKey;
-let searchHistory = JSON.parse(localStorage.getItem('cities')) || []
+let searchHistory = JSON.parse(localStorage.getItem('cities'))
+if (!searchHistory) {
+  searchHistory = []
+}
 
+// function to fetch current weather API and then post data on page
 // function to fetch current weather API and then post data on page
 function firstFetch(city) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
   ).then((response) => {
-    return response.json()
+    return response.json();
   }).then((currentWeatherData) => {
     // post current weather data
-    saveToLocal(currentWeatherData.name)
+    saveToLocal(currentWeatherData.name);
     searchCity.textContent = currentWeatherData.name;
     date.textContent = dateOfWeek();
-    humidity.textContent = currentWeatherData.main.humidity
-    wind.textContent = currentWeatherData.wind.speed
+    humidity.textContent = currentWeatherData.main.humidity;
+    wind.textContent = currentWeatherData.wind.speed;
     temperature.textContent = currentWeatherData.main.temp > 0 ?
       "+" + Math.round(currentWeatherData.main.temp) :
       Math.round(currentWeatherData.main.temp);
-      let mainWeatherIcon = currentWeatherData.weather[0].icon;
-      let mainWeatherImageUrl = `https://openweathermap.org/img/w/${mainWeatherIcon}.png`;
-      mainIcon.src = mainWeatherImageUrl;
-  })
+    let mainWeatherIcon = currentWeatherData.weather[0].icon;
+    let mainWeatherImageUrl = `https://openweathermap.org/img/w/${mainWeatherIcon}.png`;
+    mainIcon.src = mainWeatherImageUrl;
 
+    const button = document.createElement("button");
+    button.textContent = currentWeatherData.name;
+    list.append(button);
+
+    searchHistory = JSON.parse(localStorage.getItem('cities'));
+    if (!searchHistory) {
+      searchHistory = [];
+    }
+
+    if (searchHistory.length > 5) {
+      searchHistory.shift(); // Remove the oldest search city if there are more than 5 in the history
+    }
+
+    button.addEventListener('click', () => {
+      firstFetch(currentWeatherData.name);
+      secondFetch(currentWeatherData.name);
+    });
+  });
 }
+
 
 // function to fetch 5 days weather API and then post data on page
 function secondFetch(city) {
@@ -134,6 +157,15 @@ searchBtn.addEventListener('click', (e) => {
   }
 })
 
+clearBtn.addEventListener("click", clear);
+
+function clear() {
+  console.log("clear");
+  localStorage.removeItem('cities');
+  list.innerHTML = ''; 
+  searchHistory = []; 
+}
+
 // function for current date
 let dateOfWeek = () => {
   return new Date().toLocaleDateString('en-EN', { "dateStyle": "long" })
@@ -145,3 +177,13 @@ function saveToLocal(city) {
   searchHistory.push(city)
   localStorage.setItem('cities', JSON.stringify(searchHistory))
 }
+
+searchHistory.forEach((city) => {
+  const button = document.createElement("button");
+  button.textContent = city;
+  button.addEventListener('click', () => {
+    firstFetch(city);
+    secondFetch(city);
+  });
+  list.append(button);
+});
